@@ -1,27 +1,24 @@
 package com.unosquare.mycryptoapp.domain;
 
 import com.unosquare.mycryptoapp.domain.enums.Status;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.GeneratorType;
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
 import java.time.LocalDate;
 
 @Getter
 @Setter
-@Entity
 @Builder
+@AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user")
+@Document("user")
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;
@@ -39,11 +36,11 @@ public class User implements Serializable {
     private String country;
 
     @Email
-    @Column(unique = true)
+    //@Column(unique = true)
     private String email;
 
     private String password;
 
-    @Enumerated(value = EnumType.STRING)
+    //@Enumerated(value = EnumType.STRING)
     private Status status;
 }

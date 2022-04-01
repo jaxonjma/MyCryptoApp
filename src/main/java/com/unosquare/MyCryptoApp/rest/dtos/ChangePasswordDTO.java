@@ -1,9 +1,6 @@
 package com.unosquare.mycryptoapp.rest.dtos;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import java.io.Serializable;
@@ -11,6 +8,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class ChangePasswordDTO implements Serializable {
 
