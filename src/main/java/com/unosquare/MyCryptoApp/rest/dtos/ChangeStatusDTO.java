@@ -16,5 +16,5 @@ public class ChangeStatusDTO implements Serializable {
     @Email
     private String email;
 
-    private Status newStatus;
+    private String newStatus;
 }

@@ -1,5 +1,7 @@
 package com.unosquare.mycryptoapp.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.unosquare.mycryptoapp.domain.enums.Status;
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -7,6 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.time.LocalDate;
 
 @Getter
@@ -18,8 +21,7 @@ import java.time.LocalDate;
 public class User implements Serializable {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private String firstName;
 
@@ -36,11 +38,9 @@ public class User implements Serializable {
     private String country;
 
     @Email
-    //@Column(unique = true)
     private String email;
 
     private String password;
 
-    //@Enumerated(value = EnumType.STRING)
-    private Status status;
+    private String status;
 }
