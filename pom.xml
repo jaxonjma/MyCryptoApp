@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.unosquare.mycryptoapp</groupId>
     <artifactId>registration-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>registration-service</name>
     <description>registration-service</description>
     <properties>
@@ -53,12 +53,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>2.21.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

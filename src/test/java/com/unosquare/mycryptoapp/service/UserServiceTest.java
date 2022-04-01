@@ -32,9 +32,4 @@ public class UserServiceTest {
         Mockito.when(userRepository.findItemByEmail(anyString())).thenReturn(optionalUser);
         assertEquals(userService.getUserByEmail("myEmail@dominio.com"),optionalUser);
     }
-
-    @Test
-    @Disabled("Not implemented yet")
-    void testShowSomething() {
-    }
 }
