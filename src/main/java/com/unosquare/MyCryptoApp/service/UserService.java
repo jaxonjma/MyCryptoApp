@@ -25,13 +25,13 @@ import java.util.Optional;
 public class UserService {
 
     private static final String FAILED_TO_ADD_USER = "Failed to add user";
+    private static final String EMPTY_EMAIL_EXCEPTION = "Email is required";
 
-    @Autowired
     private UserRepository userRepository;
 
     public Optional<User> getUserByEmail(final String email) {
         if(StringUtils.isEmpty(email))
-            throw new IllegalArgumentException(email);
+            throw new IllegalArgumentException(EMPTY_EMAIL_EXCEPTION);
         return userRepository.findItemByEmail(email);
     }
 
